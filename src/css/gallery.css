@@ -11,8 +11,6 @@
    list-style-type: none;
    transition: transform 500ms ease-in-out;
 }
-.gallery-link {
-}
 .gallery-image {
     display: block;
     width: 360px;
