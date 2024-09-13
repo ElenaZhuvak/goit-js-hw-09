@@ -9,6 +9,15 @@ const messageArea = form.querySelector('textarea');
 
 const STORAGE_KEY = "feedback-form-state";
 
+function toFillData () {
+    const savedData = localStorage.getItem(STORAGE_KEY);
+    if (STORAGE_KEY === "string") {
+        formData = JSON.parse(savedData);
+        formData.email = emailInput.value;
+        formData.message = messageArea.value;
+    }
+}
+
 form.addEventListener('input', handelData);
 function handelData () {
     formData.email = emailInput.value.trim();
@@ -40,3 +49,5 @@ function handleFormSubmit(event) {
         message: ""
     }
 }
+
+toFillData();
