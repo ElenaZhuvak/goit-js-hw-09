@@ -22,11 +22,7 @@ form.addEventListener('input', handelData);
 function handelData () {
     formData.email = emailInput.value.trim();
     formData.message = messageArea.value.trim();
-
-    formData = {
-        email: formData.email,
-        message: formData.message
-    }
+    
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
   
 }
